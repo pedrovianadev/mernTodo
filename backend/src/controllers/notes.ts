@@ -74,7 +74,7 @@ export const updateNote: RequestHandler<UpdateNoteParams, unknown, UpdateNoteBod
 
 	try {
 		if (!mongoose.isValidObjectId(noteId)) {
-			throw createHttpError(400, 'Invalid note id');
+			throw createHttpError(400, 'Invalid NoteId');
 		}
 
 		if (!newTitle) {
